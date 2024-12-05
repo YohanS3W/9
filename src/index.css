@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.thinking-animation {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px;
+}
+
+.thinking-animation span {
+  width: 8px;
+  height: 8px;
+  background-color: #7A0000;
+  border-radius: 50%;
+  animation: bounce 0.8s infinite;
+}
+
+.thinking-animation span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.thinking-animation span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
